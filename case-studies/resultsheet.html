@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="student-result-form">
+        <fieldset>
+            <legend>Student Result Form</legend>   
+            <table>
+                <tr>
+                    <td><label for="student-name">Student Name:</label></td>
+                    <td><input type="text" id="student-name" name="student-name"></td>
+                </tr>
+                <tr>
+                    <td><label for="student-id">Student ID:</label></td>
+                    <td><input type="text" id="student-id" name="student-id"></td>
+                </tr>
+                <tr>
+                    <td><label for="student-phy">Physics:</label></td>
+                    <td><input type="text" id="student-phy" name="student-phy"></td>
+                </tr> 
+                <tr>
+                    <td><label for="student-chem">Chemistry:</label></td>
+                    <td><input type="text" id="student-chem" name="student-chem"></td>
+                </tr>
+                <tr>
+                    <td><label for="student-math">Mathematics:</label></td>
+                    <td><input type="text" id="student-math" name="student-math"></td>
+                </tr>
+                <tr>
+                    <td><label for="student-bio">Biology:</label></td>
+                    <td><input type="text" id="student-bio" name="student-bio"></td>    
+                </tr>
+                <tr>
+                    <td><label for="student-english">English:</label></td>
+                    <td><input type="text" id="student-english" name="student-english"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button id="submit-result" onclick="processResult()">Submit</button>
+                        <button id="reset-result" onclick="resetResult()">Reset</button></td>
+                </tr>
+            </table>
+            
+           
+           
+        </fieldset>
+    </div>
+    <div id="student-result-sheet">
+        <h3>STUDENT RESULT SHEET</h3>
+        <hr/>
+        <p>
+                Name: <span id="result-name"></span><br>
+                ID: <span id="result-id"></span><br>
+                Physics: <span id="result-phy"></span><br>
+                Chemistry: <span id="result-chem"></span><br>
+                Mathematics: <span id="result-math"></span><br>
+                Biology: <span id="result-bio"></span><br>
+                English: <span id="result-english"></span><br>
+        </p>
+        <hr/>
+        <p>
+            Total Marks: <span id="result-total"></span><br>
+            Average Marks: <span id="result-average"></span><br>
+            Percentage: <span id="result-percentage"></span><br>
+        </p>
+        <h5 id="message"></h5>
+    </div>
+    <script>
+          function processResult(){
+             alert("Processing Result...");
+
+             //collecting data from form
+             var name = document.getElementById("student-name").value;
+             var id = document.getElementById("student-id").value;
+             //parseFloat is used to convert string input to number
+             var phy = parseFloat(document.getElementById("student-phy").value);
+             var chem = parseFloat(document.getElementById("student-chem").value);
+             var math = parseFloat(document.getElementById("student-math").value);
+             var bio = parseFloat(document.getElementById("student-bio").value);
+             var english = parseFloat(document.getElementById("student-english").value);
+
+             //calculating total, average and percentage
+             var total = phy + chem + math + bio + english;
+             var average = total / 5;
+             var percentage = (total / 500) * 100;
+             var message = "";
+             if(percentage >= 90){
+                message = "Excellent Performance";
+            }else if(percentage >= 75){
+                    message = "Good Performance";   
+            }else if(percentage >= 60){
+                    message = "Average Performance";
+            }else if(percentage >= 40){
+                    message = "Just Pass";
+            }else{
+                    message = "Fail ,try harder next time";
+            }
+            //displaying result in result sheet
+            document.getElementById("result-name").textContent = name;
+            document.getElementById("result-id").textContent = id;
+            document.getElementById("result-phy").textContent = phy;
+            document.getElementById("result-chem").textContent = chem;
+            document.getElementById("result-math").textContent = math;
+            document.getElementById("result-bio").textContent = bio;
+            document.getElementById("result-english").textContent = english;
+            document.getElementById("result-total").textContent = total;
+            document.getElementById("result-average").textContent = average;
+            document.getElementById("result-percentage").textContent = percentage + '%';
+            document.getElementById("message").textContent = message;
+
+          }
+
+          function resetResult(){
+            alert("Resetting Result...");
+            //clearing form inputs
+            document.getElementById("student-name").value = "";
+            document.getElementById("student-id").value = "";
+            document.getElementById("student-phy").value = "";
+            document.getElementById("student-chem").value = "";
+            document.getElementById("student-math").value = "";
+            document.getElementById("student-bio").value = "";
+            document.getElementById("student-english").value = "";
+
+            //clearing result sheet
+            document.getElementById("result-name").textContent = "";
+            document.getElementById("result-id").textContent = "";
+            document.getElementById("result-phy").textContent = "";
+            document.getElementById("result-chem").textContent = "";
+            document.getElementById("result-math").textContent = "";
+            document.getElementById("result-bio").textContent = "";
+            document.getElementById("result-english").textContent = "";
+            document.getElementById("result-total").textContent = "";
+            document.getElementById("result-average").textContent = "";
+            document.getElementById("result-percentage").textContent = "";
+            document.getElementById("message").textContent = "";
+
+          }
+    </script>
+</body>
+</html>
