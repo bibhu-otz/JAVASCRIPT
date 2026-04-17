@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const arr = [1, 2, 3, 4, 5]; //literal syntax to create an array
+        const arr2 = new Array(1, 2, 3, 4, 5); //constructor syntax to create an array
+        // Both arr and arr2 are the same,but the first one is more concise and easier to read, 
+        // so it is generally preferred in JavaScript.
+
+        console.log(arr);
+        console.log(arr.length);
+        console.log(arr[0]);
+        console.log(arr[4]);
+        console.log('Printing array using traditional for loop:');
+        for (let i = 0; i < arr.length; i++) {
+            console.log(arr[i]);
+        }
+
+        console.log('Printing array using for...of loop:');
+        for (const num of arr) {
+            console.log(num);
+        }
+
+        console.log('Printing array using for in method:');
+        for (const index in arr) {
+            console.log(arr[index]);
+        }
+
+        console.log('Printing array using forEach method:');
+        arr.forEach(num => console.log(num));
+
+
+        // Array methods
+        // Array is an object in JavaScript, and it has many built-in methods that can be used to manipulate arrays.
+        // Some of the most commonly used array methods are:
+
+        console.log ('Array is an :', typeof arr  );
+        console.log('Is arr an array?', Array.isArray(arr));
+        console.log(arr instanceof Array);
+        console.log(Array.prototype);
+
+        //Array Methods
+
+        // Item insertion and deletion
+
+        // LIFO - Last In First Out
+        arr.push(6); // adds an item to the end of the array
+        arr.pop(); // removes the last item from the array
+        /*
+             Example:
+                let stack = [];
+                stack.push(1); // stack is now [1]
+                stack.push(2); // stack is now [1, 2]
+                stack.push(3); // stack is now [1, 2, 3]
+                stack.pop(); // returns 3, stack is now [1, 2]
+        */
+        // FIFO - First In First Out
+        arr.unshift(0); // adds an item to the beginning of the array
+        arr.shift(); // removes the first item from the array
+        /*
+            Example:
+                let queue = [];
+                queue.unshift(1); // queue is now [1]
+                queue.unshift(2); // queue is now [2, 1]
+                queue.unshift(3); // queue is now [3, 2, 1]
+                queue.shift(); // returns 3, queue is now [2, 1]
+        */  
+      
+        // Array Creation and Manipulation Methods
+        const arr3 = Array.from('hello'); // creates an array from a string
+        console.log(arr3); // ['h', 'e', 'l', 'l', 'o']
+        const arr4 = Array.of(1, 2, 3); // creates an array from a list of arguments
+        console.log(arr4); // [1, 2, 3]
+        const arr5 = arr.concat(arr4); // concatenates two arrays
+        console.log(arr5); // [1, 2, 3, 4, 5, 1, 2, 3]
+        const arr6 = arr.slice(1, 4); // returns a shallow copy of a portion of an array
+        console.log(arr6); // [2, 3, 4]
+        const arr7 = arr.splice(1, 2); // changes the contents of an array by removing or 
+        // replacing existing elements and/or adding new elements in place
+        console.log(arr7); // [2, 3]
+
+        // slice vs splice
+        // The slice() method returns a shallow copy of a portion of an array into a new
+        // array object selected from start to end (end not included) where start and end represent the index of items in that array. The original array will not be modified.
+        // The splice() method changes the contents of an array by removing or replacing 
+        // existing elements and/or adding new elements in place. 
+        // The splice() method modifies the original array and returns an array containing 
+        // the deleted elements.
+    </script>
+</body>
+</html>

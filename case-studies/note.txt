@@ -1,0 +1,235 @@
+Strict Mode In Javascript :
+
+  Strict Mode in  Javascript  
+
+  0     - 0
+  1     - 1
+  2     - 10
+  3     - 11
+  4     - 100
+  5     - 101
+  6     - 110
+  7     - 111
+
+
+In Javascript :
+
+there are 
+
+PRIMITIVE TYPE (7) :  typeof   or   typeof()
+
+   - number
+
+   - string
+
+   - boolean
+
+   - undefined
+
+   - null
+
+   - object
+
+   - symbol
+
+   - BigInt
+
+
+REFERENCE TYPE
+
+
+
+Student Result Sheet:
+
+
+How to Declare Variable in JS :
+
+  var  keyword
+
+  let  keyword
+
+
+  const  keyword
+
+
+var :
+
+- It was old approach
+
+- It is in function scope
+
+- It is Hoisted Itself (The variable declaration will g to the top within the function)
+
+- We can declare multiple varibale with same name
+
+- We can use variable before it's declaration
+
+
+ function Sum()
+ {
+     res = a + b ;
+
+     var res ;
+     var a=5;
+     var b=6;
+    result res;
+ }
+
+ - what is Hoisting(The declaration part will go to the top of the scopr) in Javascript
+
+      - Variable Hoisting
+      - Function Hoisting
+
+
+let :
+-----
+
+- The varibale declared using let keyword is block scoped
+
+- {
+     
+  }
+
+- We can not declared  multiple variable with same name
+
+- 
+
+   let x=5 ;
+
+   let x =10;
+
+- The variable declared with let keyword can not hoisted.
+
+Example :
+
+function Sum()
+        {
+
+            let x =10;
+            let y =20;
+            {
+                let a = 100;
+                let b = 200;
+                var c =300;
+                console.log('within localblock'+a);
+                console.log('within localblock'+b);
+            }
+            console.log('Outside the block'+a);
+            console.log('Outside the block'+b);
+            console.log('Outside the block'+c);
+            return x + y;
+        }
+
+
+const :
+
+- It decalres varibale within localsope
+
+- the varibale declared with const can not be modifed.
+
+- While declaring the varibale using const we  must have to provide initial value.
+
+-  const PI = 3.141 ;
+
+   PI=4.0; // Error
+
+
+
+- What the difference between let ,const,var
+
+
+- What is Hoisting
+
+
+- What is global Scope  ?
+
+
+- What is functin Scope ?
+
+- What is Local Scope ?
+
+
+Control Statements in Javascript :
+======================================
+
+1. Conditional Statements
+
+    if()
+
+    if()  else
+
+    ternary Operator   exp1 ? exp2 : exp3 ;
+
+
+    switch Statement
+
+
+    - Cirtcercuting Operator  ||    &&
+
+    -  ??  Null Coleasing Operator
+
+2. Loop Statement
+
+
+   - For Loop
+   - while Loop
+   - do ...while Loop
+
+   - for of loop
+   - for in loop
+
+
+   
+   - foreach() function
+
+
+Array In Javascript
+======================
+
+
+
+function in Javascript
+=======================
+ - Predefined Function
+
+    - Date   Functions
+
+    - String Functions
+
+    - Math Functions
+
+    - Numeric functions
+
+ - User Defined Function
+
+
+DOM
+=======================
+
+
+Advance :
+========
+
+- Arrow Function
+
+- Clousre 
+
+- Destructuring
+
+- Spreading
+
+- Rest Parameter
+
+- Class 
+
+
+Asynchronous Programming :
+=========================
+
+- Callback Function
+
+- Promises
+
+- async await 
+
+

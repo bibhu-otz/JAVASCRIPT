@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+   
+</head>
+<body>  
+    <div>
+        <label>Num1:</label>
+        <input type="number" id="num1">
+        <br/>
+        <label>Num2:</label>
+        <input type="number" id="num2">
+        <br/>
+        <button onclick="calculateSum()">Calculate Sum</button>
+        <hr/>
+        <h1 id="result"></h1>
+    </div>
+    <script>
+        function calculateSum() {
+            let num1 = parseFloat(document.getElementById("num1").value);
+            let num2 = parseFloat(document.getElementById("num2").value);
+            let sum = num1 + num2;
+            document.getElementById("result").textContent = "Sum: " + sum;
+        }
+
+        //  "use strict";
+        //  let status = true;
+        //  console.log("Status is: " + status);
+        //  console.log("Type of status: " + typeof status);
+        //  let name = "John Doe"; // This will cause an error in strict mode
+        //  console.log("Name is: " + name);
+        //  let name1 = 'John Doe';
+        //  console.log("Name1 is: " + name1);
+        //  console.log("Type of name: " + typeof name);
+        //  console.log("Type of name1: " + typeof name1);
+        //  console.log(name1==name); //compares only value
+        //  console.log(name1===name);//compres value and type
+
+        //  let obj = {
+        //         name: "Alice",
+        //         age: 30
+        //  };
+        //  console.log("Type of obj: " + typeof obj);
+        //  console.log("Object: " + obj);
+        //  console.log("Name: " + obj.name);
+        //  console.log("Age: " + obj.age);
+        //  obj.salary = 50000; // Adding a new property to the object
+        //  obj.department = "Engineering"; // Adding another property to the object
+        //  console.log("Updated Object: " + JSON.stringify(obj));
+
+        //  let arr = [1, 2, 3, 4, 5];
+        //  console.log("Type of arr: " + typeof arr);
+        //  let arr2 = arr; // This will create a reference to the same array
+        //  console.log("Array: " + arr);
+        //  console.log("Array 2: " + arr2);
+        //  arr2[2] = 99; // Modifying the third element of arr2
+        //  console.log("Updated Array: " + arr);
+        //  console.log("Updated Array 2: " + arr2);
+
+        //  arr2 = [...arr]; // This will create a shallow copy of the array
+        //  arr2[2] = 88; // Modifying the third element of arr2
+        //  console.log("Original Array: " + arr);
+        //  console.log("Shallow Copy Array: " + arr2);
+
+
+    </script>
+</body>
+</html>

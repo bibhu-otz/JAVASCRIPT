@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Sum()
+        {
+
+            let x =10;
+            let y =20;
+            {
+                let a = 100;
+                let b = 200;
+                var c =300;
+                console.log('within localblock'+a);
+                console.log('within localblock'+b);
+            }
+            console.log('Outside the block'+a);
+            console.log('Outside the block'+b);
+            console.log('Outside the block'+c);
+            return x + y;
+        }
+
+        console.log(Sum());
+       
+    </script>
+</body>
+</html>
