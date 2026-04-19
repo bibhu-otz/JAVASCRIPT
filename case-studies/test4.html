@@ -91,6 +91,193 @@
         // existing elements and/or adding new elements in place. 
         // The splice() method modifies the original array and returns an array containing 
         // the deleted elements.
+
+        // Array Searching and Sorting Methods
+
+        const arr8 = [5, 3, 8, 1, 2];
+        console.log(arr8.indexOf(3)); // returns the first index of the element, -1 if not found
+        console.log(arr8.includes(3)); // returns true if the element is found, false otherwise
+        console.log(arr8.find(num => num > 3)); // returns the first element that satisfies the condition
+        console.log(arr8.findIndex(num => num > 3)); // returns the index of the first element that satisfies the condition
+        console.log(arr8.sort()); // sorts the array in ascending order
+        console.log(arr8.reverse()); // reverses the array
+
+        const names = ['Alice', 'Bob', 'Charlie', 'David'];
+        console.log(names.includes('Bob')); // returns true
+        console.log(names.includes('Eve')); // returns false
+
+        const numbers = [10, 20, 30, 40, 50];
+        let result = numbers.find(num => num > 25); // 30
+        console.log(result); // 30
+
+        const nums = [5, 2, 9, 1, 5, 6];
+        nums.sort((a, b) => a - b); // sorts the array in ascending
+        console.log(nums); // [1, 2, 5, 5, 6, 9]
+        nums.sort((a, b) => b - a); // sorts the array in descending order
+        console.log(nums); // [9, 6, 5, 5, 2, 1]
+
+        /*
+        Higher-order functions are functions that take other functions as arguments 
+        or return functions as their result.
+        - Example of a higher-order function that takes a function as an argument:
+        
+        function higherOrderFunction(callback) {
+            console.log('Before callback');
+            callback();
+            console.log('After callback');
+        }
+        function callbackFunction() {
+            console.log('Inside callback');
+        }
+        higherOrderFunction(callbackFunction);
+
+        or
+         
+        higherOrderFunction(function () {
+            console.log('Inside callback');
+        });
+
+        - Arrow function as a higher-order function:
+         
+        higherOrderFunction(() => console.log('Inside callback'));
+
+         
+ 
+        */
+
+        // What is a callback function?
+        // A callback function is a function that is passed as an argument 
+        // to another function and is executed after some operation has been completed.
+
+        // Example of a callback function:
+        function fetchData(callback) {
+            setTimeout(() => {
+                const data = 'Data fetched from server';
+                callback(data);
+            }, 2000);
+        }
+        fetchData(data => {
+            console.log(data); // 'Data fetched from server'
+        });
+
+
+        //What is arrow function?
+        // An arrow function is a concise way to write a function in JavaScript.
+        // Example of an arrow function:
+        const add = (a, b) => a + b;
+        console.log(add(2, 3)); // 5
+
+        //COnverting a regular function to an arrow function:
+        function multiply(a, b) {
+            return a * b;
+        }
+
+        const multiplyFun = function (a, b) {
+            return a * b;
+        }
+
+        multiplyFun(5,2);
+
+        const multiplyArrow = (a, b) => a * b;
+        console.log(multiplyArrow(5, 2)); // 10
+
+
+        // function factorial(n) {
+        //     if (n === 0) {
+        //         return 1;
+        //     }
+        //     return n * factorial(n - 1);
+        // }
+
+
+        // const fact = function (n) {
+        //     if (n === 0) {
+        //         return 1;
+        //     }
+        //     return n * factorial(n - 1);
+        // }
+
+
+        // const fact = (n) => {
+        //     if (n === 0) {
+        //         return 1;
+        //     }
+        //     return n * fact(n - 1);
+        // }
+        // console.log(fact(5)); // 120
+
+
+        // map method , filter method and reduce method are higher-order functions 
+        // that are used to manipulate arrays in JavaScript.
+
+        //1. map method: The map() method creates a new array populated with the 
+        // results of calling a provided function on every element in the calling 
+        // array.
+        // 
+        const numbers2 = [1, 2, 3, 4, 5];
+
+        const squaredNumbers = numbers2.map(num => num * num);
+        console.log(squaredNumbers); // [1, 4, 9, 16, 25]
+
+        const newNumbers = numbers2.map((num)=> num * 10);
+        console.log(newNumbers); // [10, 20, 30, 40, 50]
+
+        //2. Filter method: The filter() method creates a new array with all elements 
+        // that pass the test implemented by the provided function.
+        // It doesn't modify the original array, it returns a new array with the filtered elements.
+        const evens = numbers2.filter(num => num % 2 === 0);
+        console.log(evens); // [2, 4]
+
+        //3. Reduce method: The reduce() method executes a reducer function 
+        // (that you provide) on each element of the array, resulting in a 
+        // single output value.
+
+        const sum = numbers2.reduce(function(accumulator,currentValue){
+            return accumulator + currentValue;
+        },0);
+        console.log(sum); // 15
+
+        // THere are two types of Array :
+        // 1. Dense Array: An array in which all the elements are defined and have a 
+        // value.
+        // Example of a dense array:
+        //const denseArray = [1, 2, 3, 4, 5];
+        // 2. Sparse Array: An array in which some elements are not defined or 
+        // have a value of undefined.
+        // Example of a sparse array:
+        //const sparseArray = [1, 2, , 4, 5]; // The third element is not defined, 
+        // so it is a sparse array.
+
+        // Disadvantages of sparse arrays:
+        // 1. Performance: Sparse arrays can be slower to access and manipulate than
+        // dense arrays because they require additional checks for undefined elements.
+        // 2. Memory Usage: Sparse arrays can consume more memory than dense arrays
+        // because they require additional storage for undefined elements.
+
+
+        //Question : Display all names  as a single string separated by commas from the following array of objects:
+        names = ['Alice', 'Bob', 'Charlie', 'David'];
+        const namesString = names.join(', ');// The join() method creates and 
+        // returns a new string by concatenating all of the elements in an array, 
+        // separated by a specified separator string. 
+        // If no separator is provided, the elements are separated 
+        // by commas by default.
+        console.log(namesString); // "Alice, Bob, Charlie, David"
+
+        const namesString2 = names.reduce((accumulator, currentValue) => {
+            return accumulator + ', ' + currentValue;
+        });
+        console.log(namesString2); // "Alice, Bob, Charlie, David"
+
+        //trim method: The trim() method removes whitespace from both ends of a 
+        // string and returns a new string, without modifying the original string.
+
+            const str = '   Hello World!   ';
+            const trimmedStr = str.trim();
+            console.log(trimmedStr); // "Hello World!"
+
+
+        
     </script>
 </body>
 </html>
