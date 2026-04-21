@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+   const name1 = 'Alok Kumar' ;
+
+   const name2 = "Alok Kumar";
+
+   console.log(typeof name1);
+   console.log(typeof name2);
+
+   console.log((name1 === name2) ? "Both are same" : "Both are different");
+
+   console.log(name1.__proto__);
+
+   console.log(name1.anchor("alok")); // anchor() method is used to create an HTML 
+   // anchor element with a specified name. It returns a string that represents the 
+   // anchor element.
+   // Output: <a name="alok">Alok Kumar</a>
+
+
+   //2. at() method is used to access the character at a specific index in a string.
+    const str = "Hello, World!";
+    console.log(str.at(0)); // Output: H
+    console.log(str.at(7)); // Output: W
+
+   // 3. big() method is used to convert a string to uppercase letters.
+   const str1 = "hello";
+    console.log(str1.big()); // Output: <big>hello</big>
+    document.write(str1.big()); // This will write the string "hello" in big letters on the
+    //  webpage.
+
+  // 4.blink() method is used to create a blinking text effect. 
+  // It returns a string that represents the blinking text.
+    const str2 = "Blinking Text";
+    console.log(str2.blink()); // Output: <blink>Blinking Text</blink>
+    document.write(str2.blink()); // This will write the string "Blinking Text" with a 
+    // blinking effect on the webpage.
+
+  // 5.bold() method is used to convert a string to bold letters.
+  const str3 = "Bold Text";
+  console.log(str3.bold()); // Output: <b>Bold Text</b>
+  document.write(str3.bold()); // This will write the string "Bold Text" in bold
+    
+  // 6.charAt() method is used to access the character at a specific index in a string.
+    const str4 = "Hello, World!";
+    console.log(str4.charAt(0)); // Output: H
+    console.log(str4.charAt(7)); // Output: W
+
+   //7. charCodeAt() method is used to get the Unicode value of the character at a specific 
+   // index in a string.
+    const str5 = "Aello, World!";
+    console.log(str5.charCodeAt(0)); // Output: 65 (Unicode value of 'A')
+    console.log(str5.charCodeAt(7)); // Output: 87 (Unicode value of 'W')
+
+   // 8. codePointAt() method is used to get the Unicode code point of the character at a specific index in a string.
+    const str6 = "Hello, World!";   
+    console.log(str6.codePointAt(0)); // Output: 72 (Unicode code point of 'H')
+    console.log(str6.codePointAt(7)); // Output: 87 (Unicode code point of 'W')
+
+  // 9. concat() method is used to concatenate two or more strings and return a new string.
+    const str7 = "Hello";
+    const str8 = "World";
+    console.log(str7.concat(", ", str8, "!")); // Output: Hello, World!
+
+
+  // 10. endsWith() method is used to check if a string ends with a specified substring. 
+  // It returns true if the string ends with the specified substring, otherwise 
+  // it returns false.
+    const str9 = "Hello, World!";
+    console.log(str9.endsWith("!")); // Output: true
+    console.log(str9.endsWith("World!")); // Output: true
+    console.log(str9.endsWith("Hello")); // Output: false
+
+  // 11. includes() method is used to check if a string contains a specified substring.
+  // It returns true if the string contains the specified substring, otherwise it returns false.
+    const str10 = "Hello, World!";
+    console.log(str10.includes("Hello")); // Output: true
+    console.log(str10.includes("world")); // Output: false (case-sensitive)
+    console.log(str10.includes("World")); // Output: true
+
+  // 12. indexOf() method is used to get the index of the first occurrence of a 
+  // specified substring in a string.
+  // It returns the index of the first occurrence of the specified substring, or -1 
+  // if the substring is not found.
+    const str11 = "Hello, World!";
+    console.log(str11.indexOf("o")); // Output: 4 (index of the first occurrence of 'o')
+    console.log(str11.indexOf("World")); // Output: 7 (index of the first occurrence of 'World')
+    console.log(str11.indexOf("JavaScript")); // Output: -1 (substring not found)
+
+    //13. lastIndexOf() method is used to get the index of the last occurrence of a
+    // specified substring in a string. It returns the index of the last occurrence of the
+    // specified substring, or -1 if the substring is not found.
+
+    const str12 = "Hello, World! Hello!";
+    console.log(str12.lastIndexOf("o")); // Output: 17 (index of the last occurrence of 'o')
+    console.log(str12.lastIndexOf("Hello")); // Output: 14 (index of the last occurrence of 
+    // 'Hello')
+    console.log(str12.lastIndexOf("JavaScript")); // Output: -1 (substring not found)
+
+    //14. length property is used to get the length of a string. It returns the number 
+    // of characters in the string.
+    const str13 = "Hello, World!";
+    console.log(str13.length); // Output: 13 (number of characters in the string)
+
+    //15. match() method is used to search for a specified pattern in a string and return 
+    // an array of matches. It takes a regular expression as an argument and returns an array 
+    // of all matches found in the string.
+
+    const str14 = "The quick brown fox jumps over the lazy dog.";
+    const regex = /o/gi; // Regular expression to match "o" (case-insensitive)
+    const matches = str14.match(regex);
+    console.log(matches); // Output: ["o", "o", "o", "o"] (array of matches found in the string)
+
+
+    //16. matchAll() method is used to search for all occurrences of a specified pattern 
+    //  in a string and return an iterator of matches. It takes a regular expression as 
+    // an argument and returns an iterator that contains all matches found in the string.
+
+    const str15 = "The quick brown fox jumps over the lazy dog.";
+    const regex1 = /o/gi; // Regular expression to match "o" (case-insensitive)
+    const matches1 = str15.matchAll(regex1);    
+    for (const match of matches1) {
+        console.log(match); // Output: ["o", 
+        // index: 12, 
+        // input: "The quick brown fox jumps over the lazy dog.", 
+        // groups: undefined
+        //]
+    }
+
+   </script>
+</body>
+</html>

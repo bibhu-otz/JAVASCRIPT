@@ -233,3 +233,84 @@ Asynchronous Programming :
 - async await 
 
 
+How to create 2-D array :
+
+   - Array of 1-D array is called 2-D array
+
+   - 3X3
+
+     const matrix = [
+         [10,20,30],
+         [40,50,60],
+         [70,80,90]
+      ];
+
+     console.log(matrix[0][0]);
+
+
+String Handling in Javascript :
+===============================
+
+- In Javascript we can create string literal using '' / ""
+
+
+-  const name1 = 'Alok Kumar' ;
+
+   const name2 = "Alok Kumar";
+
+   console.log(typeof name1);
+   console.log(typeof name2);
+
+
+01. anchor()
+02. at()
+03. big()
+04. blink()
+05. bold()
+06. charAt()
+07. charCodeAt()
+08. codePointAt()
+09. concat()
+10.String()
+11.endsWith()
+13.fixed()
+14.fontcolor()
+15.fontsize()
+16.includes()
+17.indexOf()
+18.isWellFormed()
+19.italics()
+20.lastIndexOf()
+21.length
+22.link()
+23.localeCompare()
+24.match()
+25.matchAll()
+26.normalize()
+27.padEnd()
+28.padStart()
+29.repeat()
+30.replace()
+31.replaceAll()
+32.search()
+33.slice()
+34.small()
+35.split()
+36.startsWith()
+37.strike()
+38.sub()
+39.substr()
+40.substring()
+41.sup()
+42.toLocaleLowerCase()
+43.toLocaleUpperCase()
+44.toLowerCase()
+45.toString()
+46.toUpperCase()
+47.toWellFormed()
+48.trim()
+49.trimEnd()
+50.trimStart()
+51.trimEnd()
+52.trimStart()
+53.valueOf()
