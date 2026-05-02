@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--WAP To create a Login Form dynamically using DOM-->
+    <div id="my-form"></div>
+    
+    <button id="create-form">Create Form</button>
+    <script>
+        let d=  document.getElementById('create-form')
+        d.addEventListener('click', createForm);
+       let body = d.parentNode;
+       console.log(body);
+       body.setAttribute('style', 'background-color:yellow;');
+
+        
+        function createForm() {
+            const form = document.createElement('form');
+            form.setAttribute('action', '#');
+            form.setAttribute('method', 'post');
+
+            const usernameLabel = document.createElement('label');
+            usernameLabel.setAttribute('for', 'username');
+            usernameLabel.textContent = 'Username: ';
+            form.appendChild(usernameLabel);
+
+            const usernameInput = document.createElement('input');
+            usernameInput.setAttribute('type', 'text');
+            usernameInput.setAttribute('id', 'username');
+            usernameInput.setAttribute('name', 'username');
+            form.appendChild(usernameInput);
+
+            const passwordLabel = document.createElement('label');
+            passwordLabel.setAttribute('for', 'password');
+            passwordLabel.textContent = 'Password: ';
+            form.appendChild(passwordLabel);
+
+            const passwordInput = document.createElement('input');
+            passwordInput.setAttribute('type', 'password');
+            passwordInput.setAttribute('id', 'password');
+            passwordInput.setAttribute('name', 'password');
+            form.appendChild(passwordInput);
+
+            const submitButton = document.createElement('button');
+            submitButton.setAttribute('type', 'submit');
+            submitButton.textContent = 'Login';
+            form.appendChild(submitButton);
+
+            document.getElementById('my-form').appendChild(form);
+        }   
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Heading1</h1>
+    <h1>Heading2</h1>
+    <h1>Heading3</h1>
+    <h1>Heading4</h1>
+    <h1>Heading5</h1>
+    <h1>Heading6</h1>
+    
+    <script>
+        const headings = document.querySelectorAll('h1');
+        console.log(headings);
+        headings.forEach((element, index) => {
+            element.textContent = `Heading-${index + 1}`;
+            if(index % 2 === 0) {
+                element.style.color = 'blue';
+                element.style.fontSize = '30px';
+                element.style.fontFamily = 'Arial';
+                element.style.textDecoration = 'underline';
+            } else {
+                element.style.color = 'green';
+            }
+           
+        });
+        const h7 = document.createElement('h1');
+        h7.textContent = 'Heading 7';
+        document.body.appendChild(h7);
+         const h8 = document.createElement('h1');
+        h8.textContent = 'Heading 8';
+        document.body.appendChild(h8);
+        headings[0].remove();
+        headings[1].remove();
+        headings[2].hidden = true;
+        headings[3].textContent = 'My Headings';
+    </script>
+</body>
+</html>

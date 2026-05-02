@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // ES6 (ECMAScript 2015) introduced several new features to JavaScript, including:
+        // 1. let and const for block-scoped variables
+        // 2. Arrow functions
+        // 3. Template literals
+        // 4. Destructuring assignment
+        // 5. Default parameters
+        // 6. Rest and spread operators
+        // 7. Classes
+        // 8. Modules
+        // 9. Promises
+        // 10. Enhanced object literals
+
+        //1. let and const
+        let x = 10; // block-scoped variable
+        //let x = 15; // declaring variable with same name is not allowed
+        const y =20; // block-scoped constant
+        //y = 25; // error: assignment to constant variable
+        /*
+          let :
+            - Can be reassigned
+            - Cannot be redeclared in the same scope
+            - Block-scoped
+          const :
+            - Cannot be reassigned
+            - Cannot be redeclared in the same scope
+            - Block-scoped
+            - Must be initialized at the time of declaration
+
+          var (pre-ES6):
+            - Can be reassigned
+            - Can be redeclared in the same scope
+            - Function-scoped (not block-scoped)
+            - Hoisted to the top of its scope (can be used before declaration, but will be undefined)
+           Example:
+            function example() {
+                
+                if (true) {
+                    var a = 1; // function-scoped
+                    let b = 2; // block-scoped
+                    const c = 3; // block-scoped
+                }
+                console.log(a); // 1
+                console.log(b); // ReferenceError: b is not defined
+                console.log(c); // ReferenceError: c is not defined
+            }
+            example();
+
+            Hoisting:
+            - Hoisting is a JavaScript mechanism where variable and function declarations are 
+            moved to the top of their containing scope during the compilation phase. 
+            This means that you can use variables and functions before they are declared 
+            in the code.
+            - However, only the declarations are hoisted, not the initializations. 
+            For example:
+            console.log(a); // undefined (declaration is hoisted, but not the initialization)
+            var a = 10; // declaration and initialization
+            - With let and const, the variables are also hoisted, but they are not initialized 
+            until their declaration is evaluated. 
+            This means that if you try to access a let or const variable before its 
+            declaration, you will get a ReferenceError:
+            console.log(b); // ReferenceError: Cannot access 'b' before initialization
+            let b = 20; // declaration and initialization
+            - There are some best practices to avoid issues with hoisting:
+            1. Always declare variables at the top of their scope to make it clear where 
+            they are defined.
+            2. Use let and const instead of var to avoid unintentional hoisting and to 
+            take advantage of block scoping.
+
+            - There are three types of scopes in JavaScript:
+            1. Global Scope: Variables declared outside of any function or block are in the 
+            global
+                scope and can be accessed from anywhere in the code.
+
+            2. Function Scope: Variables declared within a function are in the function scope 
+            and can only be accessed within that function.
+
+            3. Block Scope: Variables declared with let or const within a block (e.g
+                if statement, for loop) are in the block scope and can only be accessed within 
+                that block.
+            
+            - We can have variabe hoisting and function hoisting. Function declarations are 
+            hoisted to the top of their scope, which means you can call a function before 
+            it is declared in the code:
+            example(); // "Hello, World!"
+            function example() {
+                console.log("Hello, World!");
+            }
+
+        - Disadvantage of var:
+        1. Lack of block scope: Variables declared with var are function-scoped, which
+        can lead to unintended consequences when used within loops or conditional statements.
+        2. Hoisting issues: Variables declared with var are hoisted to the top of
+        their scope, which can lead to confusion and bugs if not used carefully.
+        3. Redeclaration: Variables declared with var can be redeclared within the same scope
+        without throwing an error, which can lead to unintended consequences and bugs.
+
+
+
+        ==============================
+        2. Arrow functions:
+        ==============================
+        - Arrow functions are a concise syntax for writing function expressions in JavaScript.
+        - They are defined using the => syntax and do not have their own this, arguments,
+        super, or new.target bindings. They are best suited for non-method functions.
+
+        - Function Defination Vs Function Expression:
+        1. Function Definition (Function Declaration):
+        - Example:
+        function add(a, b) {
+            return a + b;
+        }
+        2. Function Expression:
+        - Example:
+        const add = function(a, b) {
+            return a + b;   
+        };
+        const add = (a, b) => a + b; // concise body with implicit return
+        console.log(add(2, 3)); // 5
+
+
+        - Task-1: Convert the following function expression to an arrow function:
+        const multiply = function(x, y) {
+            return x * y;
+        };
+        const multiply = (x, y) => x * y; // concise body with implicit return
+        console.log(multiply(2, 3)); // 6
+
+        - Task-2: Convert the following function declaration to an arrow function:
+        function greet(name) {
+            return `Hello, ${name}!`;
+        }
+
+        const greet = function(name){
+            return `Hello, ${name}!`;
+        };
+        const greet = name => `Hello, ${name}!`; // concise body with implicit return
+        console.log(greet("Alice")); // "Hello, Alice!"
+
+        - Task-3 : Convert the following function expression to an arrow function:
+        const numbers = [1, 2, 3, 4, 5];
+        const doubled = numbers.map(function(number) {
+            return number * 2;
+        });
+        const doubled = numbers.map(number => number * 2); // concise body with implicit return
+        console.log(doubled); // [2, 4, 6, 8, 10]   
+    </script>
+</body>
+</html>

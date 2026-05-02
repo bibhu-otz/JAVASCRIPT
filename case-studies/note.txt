@@ -314,3 +314,141 @@ String Handling in Javascript :
 51.trimEnd()
 52.trimStart()
 53.valueOf()
+
+
+Date Functions :
+----------------
+
+let today = new Date();
+
+console.log(today);
+
+Predefined Functions to Handle Date :
+
+1. Date()
+2. getDate()
+3. getDay()
+4. getFullYear()
+5. getHours()
+6. getMilliseconds()
+7. getMinutes()
+8. getMonth()
+9. getSeconds()
+10 getTime()
+11.getTimezoneOffset()
+12.getUTCDate()
+13.getUTCDay()
+14.getUTCFullYear()
+15.getUTCHours()
+16.getUTCMilliseconds()
+17.getUTCMinutes()
+getUTCMonth
+: 
+ƒ getUTCMonth()
+getUTCSeconds
+: 
+ƒ getUTCSeconds()
+getYear
+: 
+ƒ getYear()
+setDate
+: 
+ƒ setDate()
+setFullYear
+: 
+ƒ setFullYear()
+setHours
+: 
+ƒ setHours()
+setMilliseconds
+: 
+ƒ setMilliseconds()
+setMinutes
+: 
+ƒ setMinutes()
+setMonth
+: 
+ƒ setMonth()
+setSeconds
+: 
+ƒ setSeconds()
+setTime
+: 
+ƒ setTime()
+setUTCDate
+: 
+ƒ setUTCDate()
+setUTCFullYear
+: 
+ƒ setUTCFullYear()
+setUTCHours
+: 
+ƒ setUTCHours()
+setUTCMilliseconds
+: 
+ƒ setUTCMilliseconds()
+setUTCMinutes
+: 
+ƒ setUTCMinutes()
+setUTCMonth
+: 
+ƒ setUTCMonth()
+setUTCSeconds
+: 
+ƒ setUTCSeconds()
+setYear
+: 
+ƒ setYear()
+toDateString
+: 
+ƒ toDateString()
+toGMTString
+: 
+ƒ toUTCString()
+toISOString
+: 
+ƒ toISOString()
+toJSON
+: 
+ƒ toJSON()
+toLocaleDateString
+: 
+ƒ toLocaleDateString()
+toLocaleString
+: 
+ƒ toLocaleString()
+toLocaleTimeString
+: 
+ƒ toLocaleTimeString()
+toString
+: 
+ƒ toString()
+toTemporalInstant
+: 
+(...)
+toTimeString
+: 
+ƒ toTimeString()
+toUTCString
+: 
+ƒ toUTCString()
+valueOf
+: 
+ƒ valueOf()
+Symbol(Symbol.toPrimitive)
+: 
+ƒ [Symbol.toPrimitive]()
+get toTemporalInstant
+: 
+ƒ ()
+set toTemporalInstant
+: 
+ƒ ()
+[[Prototype]]
+: 
+Object
+
+
+Math Functions
+---------------
+
